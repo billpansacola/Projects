@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".SuperBreakoutActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Super Breakout"
+        android:textColor="@color/colorWhite"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/startGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"/>
+
+    <Button
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/startGame"
+        android:text="Settings" />
+
+    <Button
+        android:id="@+id/leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/level"
+        android:text="Leaderboard" />
+</RelativeLayout>
