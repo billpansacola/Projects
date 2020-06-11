@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Songs with Friends</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- link rel="stylesheet" href="reset.css">-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/3f5875a633.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <header>
+      <!-- invite button and chatroom button when mobile-->
+      <!-- <a href="auth/spotify" style="color:red;">LogIn</a> -->
+      <div class="invite-containter">
+        <div class="invite">Invite</div>
+        <div class="overlay"></div>
+        <button class="exit">x</button>
+        <div class="popup">
+          <p class="popupText">
+          Invite your friends!
+          </p>
+          <a class = "popupLink" href =""></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="playlist">
+        <!-- Playlist section-->
+        <div id="playlist-name">
+          <!-- playlist name -->
+          <h1 contenteditable="true">editable playlist name </h1>
+          <h1>&nbsp;&nbsp;</h1>
+          <h1><i class="fas fa-pen fa-1x"></i></h1>
+        </div>
+        <div id="list-of-songs">
+          <i id="add" class="fas fa-plus fa-3x"></i>
+        </div>
+      </div>
+    </main>
+
+    <div id = "overlay">
+      <div class="overlay-content">
+        <div class="content">
+          <h1>Add Songs to Queue</h1>
+          <div class="search-bar">
+            <input id="searchTxt" type="text" placeholder="Search by track,album, or artist">
+            <button id="searchBtn">Search</button>
+          </div>
+          <div id="results">
+            <i class="fas fa-search fa-5x"></i>
+            <p>No results to show...yet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <!-- Song info section-->
+      <div id="left-column">
+        <p class="label">Currently Playing:</p>
+        <div id="vol-button">
+          <i class="fas fa-volume-mute fa-3x"></i>
+          <i class="fas fa-volume-up fa-3x"></i>
+        </div>
+      </div>
+      <div id="music-bar-info">
+        <div id="current-song-playing">
+          <p id="song">NO SONG AVAILABLE</p>
+          <p id="song-info">NO INFO PROCIDED</p>
+        </div>
+        <div id="current-song-duration">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="open-button">Chat</div>
+    <div class = "open-button2">
+      <i class="fas fa-comment-alt fa-2x"></i>
+    </div>
+
+    <div class="chat-popup">
+      <h3>
+        Chat
+      </h3>
+      <div id="chatbox-container">
+
+          <div id="message-container">
+          </div>
+          <form id="send-container">
+            <input type="text" id="message-input">
+            <button type="submit" id="send-button">
+              <i class="fas fa-location-arrow"></i>
+            </button>
+          </form>
+      </div>
+      <!--<textarea name="msg" required></textarea>
+      <div class="btn-send"><i class="fas fa-location-arrow"></i></div>-->
+      <div class="btn-cancel"><i class="fas fa-times fa-2x"></i></div>
+    </div>
+
+    <footer>
+      <script src="client-script.js"></script>
+    </footer>
+  </body>
+</html>
