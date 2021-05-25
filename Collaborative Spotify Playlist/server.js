@@ -34,7 +34,7 @@ passport.use(
       {
         clientID: "8b9f039568804ff783e1e850dff196fb",
         clientSecret: "fb072c92274b453fbc7b5d6bd56b647b",
-        callbackURL: 'https://wandering-temporal-foxtrot.glitch.me/auth/spotify/callback',
+        callbackURL: 'http://localhost:8080/auth/spotify/callback',
         scope: ["user-read-playback-state", "user-modify-playback-state", "playlist-read-collaborative", "playlist-read-private", "user-read-playback-state", "user-read-currently-playing", "user-read-playback-state"]
       },
     // function to call once Passport gets the user's profile and accessToken from Spotify
@@ -71,9 +71,12 @@ app.get(
     }
 );
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+
 app.post("/search-song", function(req,res) {
-  console.log(req.user);
   let accessToken = tokens[req.user];
   let track_name = req.body.track_name;
   if (track_name.search(" ")) {
@@ -236,6 +239,7 @@ app.get("/get-current-playlist", (req, res) => {
 });
 
 app.post("/update-playlist", (req,res) => {
+    console.log(req.body);
     currPlaylist.push(req.body);
     res.send();
 });
@@ -261,6 +265,8 @@ function broadcast(data) {
 //   console.log("Your app is listening on port " + listener.address().port);
 // });
 
-server.listen(process.env.PORT, () => {
-  console.log(`Server started on port ${server.address().port} :)`);
-});
+// server.listen(process.env.PORT, () => {
+//   console.log(`Server started on port ${server.address().port} :)`);
+// });
+
+server.listen(8080);

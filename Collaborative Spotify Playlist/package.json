@@ -1,0 +1,32 @@
+{
+  "name": "collaborativespotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billpansacola/CollaborativeSpotify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billpansacola/CollaborativeSpotify/issues"
+  },
+  "homepage": "https://github.com/billpansacola/CollaborativeSpotify#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "node": "^16.1.0",
+    "passport": "^0.4.1",
+    "passport-spotify": "^2.0.0",
+    "request": "^2.88.2",
+    "spotify": "^0.3.0",
+    "window": "^4.2.7",
+    "ws": "^7.4.6"
+  }
+}

@@ -1,4 +1,4 @@
-const url= "wss://wandering-temporal-foxtrot.glitch.me/main.html"
+const url= "wss://localhost:8080/main.html"
 const connection = new WebSocket(url);
 
 document.getElementById("add").addEventListener("click", () => {
@@ -428,6 +428,6 @@ function share_invite(){
   exitButton[0].style.display = 'block';
 
   // change this based on your glitch
-  popupLink.innerHTML = "https://wandering-temporal-foxtrot.glitch.me/client-login.html";
-  popupLink.href = "https://wandering-temporal-foxtrot.glitch.me/client-login.html";
+  popupLink.innerHTML = "http://localhost:8080/client-login.html";
+  popupLink.href = "http://localhost:8080/client-login.html";
 }
